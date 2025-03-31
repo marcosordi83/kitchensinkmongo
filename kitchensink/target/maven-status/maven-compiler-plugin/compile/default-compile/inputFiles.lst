@@ -1,0 +1,14 @@
+/Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/Application.java
+/Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/config/AppConfig.java
+/Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/config/JpaConfig.java
+/Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/config/MongoConfig.java
+/Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/config/WebConfig.java
+/Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/controller/HomeController.java
+/Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/controller/MemberController.java
+/Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/controller/MemberRestController.java
+/Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/data/MemberListProducer.java
+/Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/data/MemberRepository.java
+/Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/model/Member.java
+/Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/rest/MemberResourceRESTService.java
+/Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/service/MemberRegistration.java
+/Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/util/Resources.java

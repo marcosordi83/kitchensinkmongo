@@ -1,0 +1,14 @@
+org/jboss/as/quickstarts/kitchensink/config/AppConfig.class
+org/jboss/as/quickstarts/kitchensink/data/MemberRepository.class
+org/jboss/as/quickstarts/kitchensink/rest/MemberResourceRESTService.class
+org/jboss/as/quickstarts/kitchensink/controller/HomeController.class
+org/jboss/as/quickstarts/kitchensink/model/Member.class
+org/jboss/as/quickstarts/kitchensink/controller/MemberRestController.class
+org/jboss/as/quickstarts/kitchensink/controller/MemberController.class
+org/jboss/as/quickstarts/kitchensink/Application.class
+org/jboss/as/quickstarts/kitchensink/config/JpaConfig.class
+org/jboss/as/quickstarts/kitchensink/util/Resources.class
+org/jboss/as/quickstarts/kitchensink/service/MemberRegistration.class
+org/jboss/as/quickstarts/kitchensink/config/MongoConfig.class
+org/jboss/as/quickstarts/kitchensink/config/WebConfig.class
+org/jboss/as/quickstarts/kitchensink/data/MemberListProducer.class
