@@ -21,12 +21,14 @@ xmlns:f="http://xmlns.jcp.org/jsf/core"
 xmlns:h="http://xmlns.jcp.org/jsf/html"
                 template="/WEB-INF/templates/default.xhtml">
     <ui:define name="content">
-        <h1>Welcome to JBoss!</h1>
+        <h1>Welcome to Jakarta!</h1>
         <!-- Debug Form -->
         <h:form id="debug">
             <h2>Prova</h2>
             <h:panelGrid columns="1">
-                <h:outputText value="#{memberController.members}" />
+                <h:outputText value="Members count: #{members.size()}" />
+                <h:outputText value="Members empty? #{empty members}" />
+                <h:outputText value="First member (if exists): #{not empty members ? members[0].name : 'none'}" />
             </h:panelGrid>
         </h:form>
         <div>
@@ -54,7 +56,7 @@ xmlns:h="http://xmlns.jcp.org/jsf/html"
             <p>
                 <h:panelGrid columns="2">
                     <h:commandButton id="register"
-                                     action="#{memberController.register}"
+                                     action="#{register}"
                                      value="Register" styleClass="register" />
                     <h:messages styleClass="messages"
                                 errorClass="invalid" infoClass="valid"
@@ -63,11 +65,11 @@ xmlns:h="http://xmlns.jcp.org/jsf/html"
             </p>
         </h:form>
         <h2>Members</h2>
-        <h:panelGroup rendered="#{empty memberController.members}">
+        <h:panelGroup rendered="#{empty members}">
             <em>No registered members.</em>
         </h:panelGroup>
-        <h:dataTable var="_member" value="#{memberController.members}"
-                     rendered="#{not empty memberController.members}"
+        <h:dataTable var="_member" value="#{members}"
+                     rendered="#{not empty members}"
                      styleClass="simpletablestyle">
             <h:column>
                 <f:facet name="header">Id</f:facet>
