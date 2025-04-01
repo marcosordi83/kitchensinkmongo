@@ -22,7 +22,7 @@ public class RemoteMemberRegistrationIT {
             host = "http://localhost:8080";//"http://localhost:8080/kitchensink";
         }
         try {
-            return new URI(host + "/members");
+            return new URI(host + "/members/registerjson");
         } catch (URISyntaxException ex) {
             throw new RuntimeException(ex);
         }
@@ -57,6 +57,6 @@ public class RemoteMemberRegistrationIT {
         HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
 
         assertEquals(200, response.statusCode());
-        assertEquals("", response.body().toString());
+        assertEquals("redirect:/register", response.body().toString());
     }
 }

@@ -85,20 +85,20 @@ public class MemberController {
         }
     }
 
-    @PostMapping("/registerjson")
-    public String registerJson(@Valid @RequestBody Member newMember, RedirectAttributes redirectAttributes) {
-        System.out.println("newMember is  " + newMember);
-        try {
-            memberRegistration.register(newMember);
-            redirectAttributes.addFlashAttribute("message", "Registered! Registration successful");
-            return "redirect:/register";
-        } catch (Exception e) {
-            String errorMessage = getRootErrorMessage(e);
-            redirectAttributes.addFlashAttribute("errorMessage", errorMessage);
-            System.out.println(errorMessage);
-            return "redirect:/failed";
-        }
-    }
+    // @PostMapping("/registerjson")
+    // public String registerJson(@Valid @RequestBody Member newMember, RedirectAttributes redirectAttributes) {
+    //     System.out.println("newMember is  " + newMember);
+    //     try {
+    //         memberRegistration.register(newMember);
+    //         redirectAttributes.addFlashAttribute("message", "Registered! Registration successful");
+    //         return "redirect:/register";
+    //     } catch (Exception e) {
+    //         String errorMessage = getRootErrorMessage(e);
+    //         redirectAttributes.addFlashAttribute("errorMessage", errorMessage);
+    //         System.out.println(errorMessage);
+    //         return "redirect:/failed";
+    //     }
+    // }
 
     private String getRootErrorMessage(Exception e) {
         String errorMessage = "Registration failed. See server log for more information";

@@ -7,6 +7,7 @@ org/jboss/as/quickstarts/kitchensink/controller/MemberController.class
 org/jboss/as/quickstarts/kitchensink/Application.class
 org/jboss/as/quickstarts/kitchensink/config/JpaConfig.class
 org/jboss/as/quickstarts/kitchensink/util/Resources.class
+org/jboss/as/quickstarts/kitchensink/controller/MemberRestRegistration.class
 org/jboss/as/quickstarts/kitchensink/service/MemberRegistration.class
 org/jboss/as/quickstarts/kitchensink/config/MongoConfig.class
 org/jboss/as/quickstarts/kitchensink/data/MemberListProducer.class
