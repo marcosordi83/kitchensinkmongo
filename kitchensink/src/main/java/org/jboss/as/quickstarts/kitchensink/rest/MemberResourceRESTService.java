@@ -65,7 +65,7 @@ public class MemberResourceRESTService {
     // }
 
     @PostMapping
-    public ResponseEntity<?> createMember(@RequestBody Member member) {
+    public ResponseEntity<?> createMember(@ModelAttribute Member member) {
         try {
             // Validates member using bean validation
             validateMember(member);

@@ -2,7 +2,6 @@
 /Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/config/AppConfig.java
 /Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/config/JpaConfig.java
 /Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/config/MongoConfig.java
-/Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/config/WebConfig.java
 /Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/controller/HomeController.java
 /Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/controller/MemberController.java
 /Users/marcosordi/Documents/mongodb/mongokitch/kitchensinkmongo/kitchensink/src/main/java/org/jboss/as/quickstarts/kitchensink/controller/MemberRestController.java

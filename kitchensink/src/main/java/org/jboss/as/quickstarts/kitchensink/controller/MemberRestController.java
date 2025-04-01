@@ -10,9 +10,9 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,12 +21,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.beans.factory.annotation.Qualifier;
-
 import jakarta.validation.Valid;
 
-@SpringBootApplication
-@RestController
+//@SpringBootApplication
+//@RestController
+@Controller
 @RequestMapping("/members")
 @ComponentScan(basePackages = "org.jboss.as.quickstarts.kitchensink")
 //@EnableJpaRepositories(basePackages = "org.jboss.as.quickstarts.kitchensink.data")
@@ -52,6 +53,7 @@ public class MemberRestController {
 
     @GetMapping("/register")
     public String showRegistrationForm(Model model) {
+        model.addAttribute("newMember", new Member());
         return "register";
     }
 
@@ -62,7 +64,29 @@ public class MemberRestController {
     }
 
     @PostMapping("/register")
-    public String register(@Valid @RequestBody Member newMember, RedirectAttributes redirectAttributes) {
+    public String register( @ModelAttribute("newMember") Member newMember, BindingResult bindingResult,  RedirectAttributes redirectAttributes) {
+        System.out.println("Entering register method");
+        System.out.println("newMember is  " + newMember);
+
+        if (bindingResult.hasErrors()) {
+            // Optionally, add error messages to the redirect attributes if you want to display them
+            redirectAttributes.addFlashAttribute("errorMessage", "There were errors with your form submission.");
+            return "redirect:/registerbindings";
+        }
+        try {
+            memberRegistration.register(newMember);
+            redirectAttributes.addFlashAttribute("message", "Registered! Registration successful");
+            return "redirect:/register";
+        } catch (Exception e) {
+            String errorMessage = getRootErrorMessage(e);
+            redirectAttributes.addFlashAttribute("errorMessage", errorMessage);
+            System.out.println(errorMessage);
+            return "redirect:/failed";
+        }
+    }
+
+    @PostMapping("/registerjson")
+    public String registerJson(@Valid @RequestBody Member newMember, RedirectAttributes redirectAttributes) {
         System.out.println("newMember is  " + newMember);
         try {
             memberRegistration.register(newMember);

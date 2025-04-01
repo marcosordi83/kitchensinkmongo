@@ -46,22 +46,13 @@
     <version>5.0.0.Alpha1</version>
 </dependency>
 <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>3.3.2</version>
-        </dependency>
-        <dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-reactor-netty</artifactId>
-</dependency>
-<dependency>
     <groupId>io.projectreactor.netty</groupId>
     <artifactId>reactor-netty</artifactId>
     <version>1.2.4</version> <!-- or the compatible version for your Spring Boot version -->
 </dependency>
-        <dependency>
+<dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webflux</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
             <version>3.3.2</version>
         </dependency>
         <dependency>
@@ -237,6 +228,20 @@
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-data-mongodb</artifactId>
 </dependency>
+    <!-- Other dependencies -->
+
+    <!-- Thymeleaf dependency -->
+    <dependency>
+        <groupId>org.thymeleaf</groupId>
+        <artifactId>thymeleaf-spring5</artifactId>
+        <version>3.0.11.RELEASE</version>
+    </dependency>
+
+    <!-- Spring Boot Thymeleaf starter -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
     </dependencies>
 <repositories>
     <repository>
