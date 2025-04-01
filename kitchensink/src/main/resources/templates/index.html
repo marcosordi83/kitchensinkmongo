@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome to Spring MVC</title>
+</head>
+<body>
+    <h1>Welcome to Spring MVC!</h1>
+    
+    <div>
+        <p>You have successfully deployed a Spring MVC Application.</p>
+        <a th:href="@{/members/register}">Register a new member</a>
+    </div>
+    
+    <h2>Members</h2>
+    <div th:if="${members == null || members.isEmpty()}">
+        <em>No registered members.</em>
+    </div>
+    
+    <table th:if="${members != null && !members.isEmpty()}">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone #</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="member : ${members}">
+                <td th:text="${member.id}">1</td>
+                <td th:text="${member.name}">John Doe</td>
+                <td th:text="${member.email}">john@example.com</td>
+                <td th:text="${member.phoneNumber}">123-456-7890</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
