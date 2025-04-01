@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Error</title>
+</head>
+<body>
+    <h1>Error Occurred</h1>
+    <div>
+        <p>An error occurred. Please try again or contact support.</p>
+        <p th:if="${message}" th:text="${message}">Error message</p>
+    </div>
+    <a th:href="@{/}">Return to Home</a>
+</body>
+</html>

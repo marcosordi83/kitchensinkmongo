@@ -80,4 +80,8 @@ public class Member implements Serializable {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 '}';
     }
+
+    public Member() {
+        // Empty default constructor
+    }
 }

@@ -8,41 +8,21 @@
     
     <div>
         <p>You have successfully deployed a Spring MVC Application.</p>
+        <a th:href="@{/members/register}">Register a new member</a>
     </div>
     
-    <form th:action="@{/members/register}" th:object="${newMember}" method="post">
-        <h2>Member Registration</h2>
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" th:value="${newMember != null ? newMember.name : ''}"/>
-        </div>
-        
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" th:value="${newMember != null ? newMember.email : ''}"/>
-        </div>
-        
-        <div>
-            <label for="phoneNumber">Phone #:</label>
-            <input type="text" id="phoneNumber" name="phoneNumber" th:value="${newMember != null ? newMember.phoneNumber : ''}"/>
-        </div>
-        
-        <button type="submit">Register</button>
-    </form>
-    
     <h2>Members</h2>
-    <div th:if="${#lists.isEmpty(members)}">
+    <div th:if="${members == null || members.isEmpty()}">
         <em>No registered members.</em>
     </div>
     
-    <table th:if="${not #lists.isEmpty(members)}">
+    <table th:if="${members != null && !members.isEmpty()}">
         <thead>
             <tr>
                 <th>Id</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone #</th>
-                <th>REST URL</th>
             </tr>
         </thead>
         <tbody>
@@ -51,18 +31,8 @@
                 <td th:text="${member.name}">John Doe</td>
                 <td th:text="${member.email}">john@example.com</td>
                 <td th:text="${member.phoneNumber}">123-456-7890</td>
-                <td>
-                    <a th:href="@{/members/{id}(id=${member.id})}">REST URL</a>
-                </td>
             </tr>
         </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="5">
-                    REST URL for all members: <a th:href="@{/members}">All Members</a>
-                </td>
-            </tr>
-        </tfoot>
     </table>
 </body>
 </html>

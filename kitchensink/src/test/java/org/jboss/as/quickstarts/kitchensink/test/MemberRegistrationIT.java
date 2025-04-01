@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 import java.util.logging.Logger;
 import org.jboss.as.quickstarts.kitchensink.model.Member;
 import org.jboss.as.quickstarts.kitchensink.service.MemberRegistration;
-import org.jboss.as.quickstarts.kitchensink.controller.MemberController;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

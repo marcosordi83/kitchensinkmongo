@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Member Registration</title>
+</head>
+<body>
+    <h1>Member Registration</h1>
+    
+    <!-- Success message -->
+    <div th:if="${successMessage}" style="color: green;">
+        <p th:text="${successMessage}">Success</p>
+    </div>
+    
+    <!-- Error message -->
+    <div th:if="${errorMessage}" style="color: red;">
+        <p th:text="${errorMessage}">Error</p>
+    </div>
+    
+    <form th:action="@{/members/register}" th:object="${newMember}" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" th:field="*{name}" />
+            <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" style="color: red;"></span>
+        </div>
+        
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" th:field="*{email}" />
+            <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" style="color: red;"></span>
+        </div>
+        
+        <div>
+            <label for="phoneNumber">Phone #:</label>
+            <input type="text" id="phoneNumber" th:field="*{phoneNumber}" />
+            <span th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}" style="color: red;"></span>
+        </div>
+        
+        <button type="submit">Register</button>
+    </form>
+    
+    <!-- Link back to home page -->
+    <div>
+        <a th:href="@{/}">Back to Home</a>
+    </div>
+</body>
+</html>
